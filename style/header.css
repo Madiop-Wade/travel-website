@@ -1,0 +1,135 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,300&family=Roboto:wght@300&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    font-family: 'Montserrat', sans-serif;
+}
+:root{
+  --color-1:#2a1d52;
+  --color-2:#6c77f4;
+  --color-3: rgb(99,164,233);
+  --color-4: #4fedd2;
+  --color-5: #36d0ea;
+  --white: #ddd;
+  --black: #333;
+  --border-radius: 25px;
+  --shadow: 0 1px 3px #333;
+}
+html::-webkit-scrollbar {
+  width: 0.5rem;
+}
+html::-webkit-scrollbar-track {
+  background: var(--white);
+}
+html::-webkit-scrollbar-thumb {
+  background: var(--color-1);
+}
+
+
+header{
+  background: var(--color-1);
+  position:fixed ;
+  top:0;
+  width: 100%;
+    /* left:0; */
+   right:0;
+  z-index: 1000;
+  display: flex;
+  padding: 1.5rem 2rem ;
+  /* padding-top: 1rem;
+  padding-bottom: 1rem; */
+  /* box-shadow: var(--box-shadow); */
+  align-items: center;
+  justify-content: space-between;
+  /* border-radius: var(--border-radius); */
+ 
+}
+header .logo{
+  font-size: 1.6rem;
+  color:var(--white);
+  padding: 0px 3rem;
+  cursor: pointer;
+ 
+}
+ 
+header nav a{
+  color: var(--color-5);
+  font-size: 1.3rem;
+ margin-left:2rem;
+ 
+ transition: 0.5s ease;
+}
+header nav a:hover{
+ 
+      color: var(--white);
+      
+        
+        border-bottom: .1rem solid var(--white);
+        padding-bottom: .5rem;
+    
+  
+}
+
+.icons{
+  font-size: 2.5rem;
+  cursor: pointer;
+  color:var(--white);
+  display: none;
+}
+
+
+
+
+
+
+
+
+
+@media (max-width:768px){
+
+  .icons{
+     display: inline-block;
+     transition: .2s linear;
+  }
+
+
+  .navbar {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      border-top: 1px solid #fff;
+      position: absolute;
+      top: 88px;
+      left: -110%;
+      transition: all 0.5s ease;
+    }
+  
+    .open .navbar {
+      background: var(--color-2);
+      left: 0px;
+      /* transition: all 0.5s ease; */
+      z-index: 1;
+    }
+   header nav a {
+      padding: 1.5rem;
+      width: 100%;
+      text-align: center;
+      color: #fff;
+border-bottom: none;
+      
+    }
+    #ouvrir {
+      display: block;
+    }
+    #fermer {
+      display: none;
+    }
+    .open #ouvrir {
+      display: none;
+    }
+    .open #fermer {
+      display: block;
+    }
+} 
